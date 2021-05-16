@@ -2,7 +2,13 @@ version: 2.1
 
 orbs:
   detect: circleci/os-detect@0.3.0
-
+  
+parameters:
+      lacondition:
+        description: La condition
+        type: string
+        default: $condition_needed
+        
 commands: # a reusable command with parametersssssss
   greeting:
     parameters:
@@ -29,6 +35,7 @@ jobs:
           extended: false
           
       - run: |
+          echo << pipeline.parameters.lacondition >>
           echo "Oh la laaaaa" 
           echo $condition_needed
           
