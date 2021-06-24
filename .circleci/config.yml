@@ -27,7 +27,7 @@ workflows:
       - build:
         - schedule:
           cron: "30 5 5 * *"
-          filters:
-            branches:
-              only:
-                - tech5irl-patch-2
+            filters:
+              branches:
+                only:
+                  - tech5irl-patch-2
