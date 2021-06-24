@@ -32,4 +32,4 @@ workflows:
                 - tech5irl-patch-2
                 
     jobs:
-      - build:
+      - build
