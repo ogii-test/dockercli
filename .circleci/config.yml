@@ -24,4 +24,10 @@ workflows:
   version: 2.1
   build:
     jobs:
-      - build
+      - build:
+        - schedule:
+          cron: "30 5 5 * *"
+          filters:
+            branches:
+              only:
+                - tech5irl-patch-2
