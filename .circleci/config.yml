@@ -6,11 +6,12 @@ jobs:
       - image: circleci/node
     steps:
       - run: |
-          mkdir /home/circleci/project/tmp
-          echo "Hello file" > /home/circleci/project/tmp/toto.txt
+          mkdir ~/tmp
+          echo "Hello file" > ~/tmp/toto.txt
           pwd
           ls -al
-          ls -al /home/circleci/project/tmp
+          ls -al ~/tmp
+
       - persist_to_workspace:
           root: tmp
           paths:
